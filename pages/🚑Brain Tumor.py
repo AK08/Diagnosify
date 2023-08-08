@@ -6,6 +6,7 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 from keras.models import load_model
 from werkzeug.utils import secure_filename
+from PIL import Image
 
 # Get the absolute path to the model file
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -20,8 +21,8 @@ def get_className(classNo):
 
 # Define the function to get the result from the model
 def getResult(img):
-    image = cv2.imread(img)
-    image = Image.fromarray(image, 'RGB')
+    image = Image.open(img)
+    image = image.convert('RGB')
     image = image.resize((64, 64))
     image = np.array(image)
     input_img = np.expand_dims(image, axis=0)
