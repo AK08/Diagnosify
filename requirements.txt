@@ -2,4 +2,4 @@ streamlit
 tensorflow
 pillow
 werkzeug
-opencv-python
+

@@ -1,12 +1,10 @@
 import os
 import streamlit as st
-import cv2
 import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
 from keras.models import load_model
 from werkzeug.utils import secure_filename
-from PIL import Image
 
 # Get the absolute path to the model file
 current_dir = os.path.dirname(os.path.abspath(__file__))
