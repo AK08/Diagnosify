@@ -4,11 +4,11 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
 from keras.models import load_model
-from werkzeug.utils import secure_filename
 
 # Get the absolute path to the model file
 current_dir = os.path.dirname(os.path.abspath(__file__))
 model_file_path = os.path.join(current_dir, 'BrainTumor10EpochsCategorical.h5')
+model = load_model(model_file_path)
 
 # Define the function to get class names
 def get_className(classNo):
@@ -18,8 +18,7 @@ def get_className(classNo):
         return "Yes Brain Tumor"
 
 # Define the function to get the result from the model
-def getResult(img):
-    image = Image.open(img)
+def getResult(image):
     image = image.convert('RGB')
     image = image.resize((64, 64))
     image = np.array(image)
@@ -36,10 +35,8 @@ def main():
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png"])
 
     if uploaded_file is not None:
-        file_path = os.path.join('uploads', secure_filename(uploaded_file.name))
-        with open(file_path, "wb") as f:
-            f.write(uploaded_file.getbuffer())
-        value = getResult(file_path)
+        image = Image.open(uploaded_file)
+        value = getResult(image)
         result = get_className(value)
         st.text(f"Prediction: {result}")
 
