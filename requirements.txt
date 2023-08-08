@@ -1,5 +1,6 @@
 streamlit
 tensorflow
-opencv-python
 pillow
 werkzeug
+opencv-python-headless
+libgl1-mesa-glx
