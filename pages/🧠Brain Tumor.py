@@ -29,7 +29,7 @@ def getResult(image):
 
 # Main function to run the web application
 def main():
-    st.title("Brain Tumor Image Classification")
+    st.title("Brain Tumor Prediction")
     st.text("Upload an MRI scan image to check for brain tumor")
 
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png"])

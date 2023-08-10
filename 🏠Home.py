@@ -1,11 +1,11 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Brain Disease Image Classification",
-    page_icon="🧠",
+    page_title="Disease Prediction",
+    page_icon="🩺🔍",
 )
 
-st.write("# Welcome to Brain Disease Image Classification! 👋")
+st.write("# Welcome to Disease Prediction! 👋")
 
 st.markdown(
     """
