@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-import tensorflow as tf
 from tensorflow.keras.models import load_model
 import os
 
@@ -11,7 +10,6 @@ def predict_label(img_path):
     test_image = np.array(test_image) / 255.0
     test_image = test_image.reshape(-1, 128, 128, 1)
 
-    
     verbose_name = {
         0: "Non Demented",
         1: "Very Mild Demented",
@@ -20,9 +18,14 @@ def predict_label(img_path):
     }
 
     # Get the absolute path to the model file
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    model_file_path = os.path.join(current_dir, 'alzheimer_cnn_model.h5')
-    model = load_model(model_file_path)
+    models_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "models")
+    model_file_path = os.path.join(models_dir, 'alzheimer_cnn_model.h5')
+    
+    if os.path.exists(model_file_path):
+        model = load_model(model_file_path)
+    else:
+        st.write("Model file not found:", model_file_path)
+        st.stop()
 
     predict_x = model.predict(test_image)
     classes_x = np.argmax(predict_x, axis=1)

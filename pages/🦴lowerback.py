@@ -4,10 +4,11 @@ import pandas as pd
 from tensorflow.keras.models import load_model
 import os
 
-
 # Get the absolute path to the model file
-current_dir = os.path.dirname(os.path.abspath(__file__))
-model_file_path = os.path.join(current_dir, 'lower_back.h5')
+models_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "models")
+model_file_path = os.path.join(models_dir, 'lower_back.h5')
+
+# Load the model
 model = load_model(model_file_path)
 
 st.write("""
@@ -30,22 +31,27 @@ cervical_tilt = st.number_input("Cervical Tilt")
 sacrum_angle = st.number_input("Sacrum Angle")
 scoliosis_slope = st.number_input("Scoliosis Slope")
 
-# Create an array of the entered values
-input_data = np.array([
-    [pelvic_incidence, pelvic_tilt, lumbar_lordosis_angle, sacral_slope,
-    pelvic_radius, degree_spondylolisthesis, pelvic_slope, direct_tilt,
-    thoracic_slope, cervical_tilt, sacrum_angle, scoliosis_slope]
-])
+# Add a Predict button
+predict_button = st.button("Predict")
 
-# Make prediction
-prediction = model.predict(input_data)
-predicted_class = prediction[0][0]
+# Display prediction result after clicking the Predict button
+if predict_button:
+    # Create an array of the entered values
+    input_data = np.array([
+        [pelvic_incidence, pelvic_tilt, lumbar_lordosis_angle, sacral_slope,
+        pelvic_radius, degree_spondylolisthesis, pelvic_slope, direct_tilt,
+        thoracic_slope, cervical_tilt, sacrum_angle, scoliosis_slope]
+    ])
 
-# Define a threshold for class prediction
-threshold = 0.5
+    # Make prediction
+    prediction = model.predict(input_data)
+    predicted_class = prediction[0][0]
 
-# Display prediction result
-if predicted_class >= threshold:
-    st.write("Prediction: You have back pain.")
-else:
-    st.write("Prediction: You don't have back pain.")
+    # Define a threshold for class prediction
+    threshold = 0.5
+
+    # Display prediction result
+    if predicted_class >= threshold:
+        st.write("Prediction: You have back pain.")
+    else:
+        st.write("Prediction: You don't have back pain.")

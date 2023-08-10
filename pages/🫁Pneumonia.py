@@ -4,9 +4,10 @@ import numpy as np
 from PIL import Image
 from keras.models import load_model
 
+
 # Get the absolute path to the model file
-current_dir = os.path.dirname(os.path.abspath(__file__))
-model_file_path = os.path.join(current_dir, 'chest_xray.h5')
+models_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "models")
+model_file_path = os.path.join(models_dir, 'chest_xray.h5')
 model = load_model(model_file_path)
 
 # Define class names

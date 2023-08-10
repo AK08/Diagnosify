@@ -20,11 +20,12 @@ def main():
         # Display the uploaded image
         st.image(img, caption='Uploaded Image', use_column_width=True)
         
+        # Get the absolute path to the model file
+        models_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "models")
+        model_file_path = os.path.join(models_dir, 'cnn_model_skin1.h5')
         
-        # Get the directory of the script
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        model_path = os.path.join(script_dir, "cnn_model_skin1.h5")
-        model = load_model(model_path)
+        # Load the model
+        model = load_model(model_file_path)
         
         # Make prediction
         prediction = model.predict(x)
