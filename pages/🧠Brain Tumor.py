@@ -3,7 +3,6 @@ import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
-from keras.models import load_model
 
 # Get the absolute path to the model file
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -18,7 +17,7 @@ def get_className(classNo):
         return "Yes Brain Tumor"
 
 # Define the function to get the result from the model
-def getResult(image):
+def get_prediction(image):
     image = image.convert('RGB')
     image = image.resize((64, 64))
     image = np.array(image)
@@ -36,8 +35,12 @@ def main():
 
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
-        value = getResult(image)
+        value = get_prediction(image)
         result = get_className(value)
+        
+        # Display the uploaded image
+        st.image(image, caption='Uploaded Image', use_column_width=True)
+        
         st.text(f"Prediction: {result}")
 
 if __name__ == "__main__":

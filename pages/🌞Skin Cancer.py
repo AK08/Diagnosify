@@ -3,6 +3,7 @@ import numpy as np
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
 from PIL import Image
+import os
 
 def main():
     st.title("Skin Cancer Prediction")
@@ -20,8 +21,10 @@ def main():
         st.image(img, caption='Uploaded Image', use_column_width=True)
         
         
-        # Load the model
-        model = load_model("cnn_model_skin1.h5")
+        # Get the directory of the script
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        model_path = os.path.join(script_dir, "cnn_model_skin1.h5")
+        model = load_model(model_path)
         
         # Make prediction
         prediction = model.predict(x)
