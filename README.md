@@ -155,12 +155,17 @@ In conclusion, our journey of building Diagnosify using oneDNN and Intel oneAPIs
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### References for Datasets 
+### References for Datasets
 
 Alzheimer - https://www.kaggle.com/datasets/sachinkumar413/alzheimer-mri-dataset
+
 Stroke - https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
+
 Parkinsons - https://www.kaggle.com/datasets/kmader/parkinsons-drawings
+
 Brain Tumor - https://github.com/aaronDev28/Brain-datasets/tree/main
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
