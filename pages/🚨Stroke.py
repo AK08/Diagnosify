@@ -62,6 +62,6 @@ if st.button('Predict'):
                             work_type_Self_employed, work_type_children, Residence_type_Urban,
                             smoking_status_formerly_smoked, smoking_status_never_smoked, smoking_status_smokes)
     if result:
-        st.write('Prediction: Patient is likely to have a stroke event.')
+        st.write('##### Prediction: Patient is likely to have a stroke event.')
     else:
-        st.write('Prediction: Patient is unlikely to have a stroke event.')
+        st.write('##### Prediction: Patient is unlikely to have a stroke event.')
