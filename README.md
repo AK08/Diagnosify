@@ -62,7 +62,7 @@ Diagnosify is an innovative brain disease classification project designed to lev
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Inspiration <img src="images/inspo.png" alt="png" width="30">
+### Inspiration {#inspiration} <img src="images/inspo.png" alt="png" width="30">
 The inspiration behind the creation of Diagnosify stems from the pressing need for more accurate, efficient, and accessible methods of brain disease diagnosis in the modern healthcare landscape. The convergence of medical expertise and technological advancements has the potential to revolutionize the way diseases are detected and treated. Several key factors have motivated the inception of Diagnosify:
 
 1. <b>Early Detection and Intervention: </b> Timely detection of diseases is often a critical factor in determining patient outcomes. Many medical conditions, such as brain tumors and neurodegenerative disorders like Alzheimer's disease, can exhibit subtle symptoms in their early stages. Diagnosify seeks to provide healthcare professionals with tools that enable them to identify these diseases at an early phase, leading to more effective treatment strategies and improved patient quality of life.
