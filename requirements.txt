@@ -8,4 +8,4 @@ numpy
 scikit-learn-intelex
 openai
 xgboost
-skimage
+scikit-image
