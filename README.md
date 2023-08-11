@@ -7,7 +7,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/AK08/Smart-Garbage-Segregation">
+  <a href="https://github.com/AK08/Disease-Classification.git">
     <img src="Medical research-cuate.png" alt="Logo" width="80" height="80">
   </a>
 
