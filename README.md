@@ -11,7 +11,7 @@
     <img src="images/team.png" >
   </a>
 
-  <h3 align="center">Diagnosify - Brain Disease Classification</h3>
+  <h1 align="center">Diagnosify - Brain Disease Classification</h1>
 
   <p align="center">
     Welcome to our project!
