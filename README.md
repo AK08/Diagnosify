@@ -20,7 +20,6 @@
     <a href="https://drive.google.com/file/d/1itKq5K-_9NWnvV7kbW4jGxd6lTLQHwen/view?usp=sharing">View Video</a>
     ·
     <a href="https://diagnosify.streamlit.app/">View Deployment</a>
-    .
   </p>
 </div>
 
@@ -33,15 +32,15 @@
     <li>
       <a href="#about-the-project">About the Project</a>
       <ul>
-        <li><a href="images/learn.png">Inspiration</a></li>
+        <li><a href="#inspiration">Inspiration</a></li>
         <li><a href=#social-impact>Social Impact</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li>
-      <a href="#intel-oneapi">Intel OneAPI</a>
+      <a href="#intel-oneapi">Intel® OneAPI</a>
       <ul>
-        <li><a href="#use-of-onednn-in-our-project">Use of oneDNN and TensorFlow in our project</a></li>
+        <li><a href="#Use of oneAPI in our project">Use of oneDNN and TensorFlow in our project</a></li>
       </ul>
     </li>
     <li><a href="#what-it-does">What it does</a></li>
@@ -58,7 +57,7 @@
 <div align="center">
   <img src="images/Medical research-cuate.png" type="gif" alt="png" width="750">
 </div>
-Diagnosify is an innovative brain disease classification project designed to leverage the power of machine learning and Intel oneAPIs for accurate and efficient brain disease prediction. In the modern healthcare landscape, early and accurate diagnosis plays a pivotal role in ensuring timely medical interventions and improved patient outcomes. Diagnosify addresses this need by offering a platform that assists medical professionals in brain diagnosing various diseases using advanced machine learning techniques. The project focuses on the classification of diseases such as Brain Tumor, Alzheimer's Disease, Parkinson's Disease, and Stroke. This repository contains the code and resources used to train and deploy the disease classification models.
+Diagnosify is an innovative brain disease classification project designed to leverage the power of machine learning and Intel® oneAPIs for accurate and efficient brain disease prediction. In the modern healthcare landscape, early and accurate diagnosis plays a pivotal role in ensuring timely medical interventions and improved patient outcomes. Diagnosify addresses this need by offering a platform that assists medical professionals in brain diagnosing various diseases using advanced machine learning techniques. The project focuses on the classification of diseases such as Brain Tumor, Alzheimer's Disease, Parkinson's Disease, and Stroke. This repository contains the code and resources used to train and deploy the disease classification models.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,22 +94,85 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Intel one api -->
-## Intel oneAPI
-Intel OneAPI is a comprehensive development platform for building high-performance, cross-architecture applications. It provides a unified programming model, tools, and libraries that allow developers to optimize their applications for Intel CPUs, GPUs, FPGAs, and other hardware. Intel OneAPI includes support for popular programming languages like C++, Python, and Fortran, as well as frameworks for deep learning, high-performance computing, and data analytics. With Intel OneAPI, developers can build applications that can run on a variety of hardware platforms, from edge devices to data centers, and take advantage of the performance benefits of Intel architectures.
+## Intel® oneAPI
+Intel® OneAPI is a comprehensive development platform for building high-performance, cross-architecture applications. It provides a unified programming model, tools, and libraries that allow developers to optimize their applications for Intel® CPUs, GPUs, FPGAs, and other hardware. Intel® OneAPI includes support for popular programming languages like C++, Python, and Fortran, as well as frameworks for deep learning, high-performance computing, and data analytics. With Intel® OneAPI, developers can build applications that can run on a variety of hardware platforms, and take advantage of the performance benefits of Intel® architectures.
 
-### Use of oneDNN and TensorFlow in our project
+### Use of oneAPI in our project
 
-OneDNN provides highly optimized routines for various deep learning operations, including convolution, pooling, normalization, and activation functions. By using oneDNN, you can expect faster execution times and better performance on modern CPUs, especially those with Intel processors.
+In this section, we'll outline how we utilized various Intel® oneAPI libraries and frameworks to enhance the performance and efficiency of our models.
 
-In this project <code>os.environ['TF_ENABLE_ONEDNN_OPTS'] = '1'</code> line sets an environment variable called <code>TF_ENABLE_ONEDNN_OPTS to '1'</code>. This enables the use of Intel's OneAPI Deep Neural Network Library (OneDNN) optimizations for TensorFlow on the system where this code is being run. OneDNN is a high-performance library for deep learning that is designed to optimize the performance of deep neural network computations on a variety of hardware platforms. By enabling OneDNN optimizations, this code may run faster on certain hardware architectures that are compatible with OneDNN. <strong>In this project, the Conv2D and Dense layers will be automatically optimized using oneDNN, which should result in faster training and inference times on compatible hardware.</strong>
+* oneAPI Data Analytics Library (oneDAL)
 
-The <code>tensorflow.keras</code> module is used to create a convolutional neural network (CNN) model for image classification. The model architecture consists of three convolutional blocks, each followed by a max pooling layer, and three fully connected layers with dropout for regularization.
+The oneAPI Data Analytics Library (oneDAL) is a versatile machine learning library that accelerates big data analysis at all stages of the pipeline. To leverage the power of oneDAL, I employed the Intel® Extension for Scikit-learn*, an integral part of oneDAL that enhances existing scikit-learn code by patching it.
 
-Finally, the <code>model.compile</code> method is called to configure the optimizer, loss function, and evaluation metric for the model. The optimizer used is Adam, and the loss function used is sparse categorical cross-entropy. The model is also evaluated using the accuracy metric.
+Installation:
+<code>pip install scikit-learn-intelex</code> 
+
+Usage:<br>
+<code>from sklearnex import patch_sklearn
+patch_sklearn()</code>
+
+By integrating Intel® Extension for Scikit-learn*, I achieved substantial acceleration, with performance gains ranging from 10x to 100x across various applications.
+
+* oneAPI Deep Neural Network Library (oneDNN)
+
+To optimize deep learning applications on Intel® CPUs and GPUs, I integrated the oneAPI Deep Neural Network Library (oneDNN). To enable oneDNN optimizations for TensorFlow* running on Intel® hardware, I used the following code:
+
+<code>os.environ['TF_ENABLE_ONEDNN_OPTS'] = '1'
+os.environ['DNNL_ENGINE_LIMIT_CPU_CAPABILITIES'] = '0'</code> 
+
+Before training my models, I disabled the system allocator using the following code to enhance performance:
+
+<code>os.environ['TF_ONEDNN_USE_SYSTEM_ALLOCATOR'] = '0'</code>
+
+After training and before inference, I re-enabled the system allocator using:
+
+<code>os.environ['TF_ONEDNN_USE_SYSTEM_ALLOCATOR'] = '1'</code>
+
+Moreover, I assumed frozen weights for inference using:
+
+<code>os.environ['TF_ONEDNN_ASSUME_FROZEN_WEIGHTS'] = '1'</code>
+
+* Intel® oneAPI DPC++ Library (oneDPL)
+
+The Intel® oneAPI DPC++ Library (oneDPL) aims to simplify SYCL* programming efforts across devices for high-performance parallel applications. I harnessed the power of oneDPL using specific environment variables to optimize performance and memory utilization.
+
+<code>os.environ['ONEAPI_DEVICE_SELECTOR'] = 'opencl:*'
+os.environ['SYCL_ENABLE_DEFAULT_CONTEXTS'] = '1'
+os.environ['SYCL_ENABLE_FUSION_CACHING'] = '1'</code>
+
+* Intel® oneAPI AI Analytics Toolkit (AI Kit)
+
+The Intel® oneAPI AI Analytics Toolkit (AI Kit) offers an integrated solution for preprocessing, machine learning, and model development. To optimize deep learning training on Intel® XPUs and streamline inference, I utilized the toolkit's Intel®-optimized deep-learning frameworks for TensorFlow*.
+
+<code>pip install --upgrade intel-extension-for-tensorflow[cpu]</code>
+
+I set the backend type to CPU for Intel® Tensorflow Operator Optimization:
+
+<code>os.environ['ITEX_XPU_BACKEND'] = 'CPU'</code>
+
+And enabled Advanced Automatic Mixed Precision for improved inference speed and reduced memory consumption:
+
+<code>os.environ['ITEX_AUTO_MIXED_PRECISION'] = '1'</code>
+
+#### Model Specifics and Usage
+Alzheimer's Disease Prediction and Brain Tumor Detection models are TensorFlow-based. For these, I used the Intel® Extension for TensorFlow* from the AI Kit, oneDAL, oneDPL and oneDNN to enhance performance. Parkinson's Disease Detector and Stroke Event Prediction models were optimized using the Intel® Extension for Scikit-learn from oneDAL.
+
+#### Performance Comparison
+The following graphs illustrate the substantial performance improvements achieved by integrating Intel® oneAPI libraries and frameworks into my Brain Disease Predictor App:
+
+1. Comparing execution time of model training for Alzheimer's Disease Prediction
+
+3. Comparing execution time of model training for Stroke Event Prediction (Best Model)
+4. Comparing execution time of model training for Parkinson's Disease Detector (Best Model)
+5. Comparing execution time of model training for Brain Tumor Prediction
+
+
+By leveraging the power of Intel® oneAPI libraries and frameworks, our models achieves remarkable performance enhancements and optimized memory utilization across various disease prediction models. The seamless integration of oneDAL, oneDNN, oneDPL, and AI Kit contributes to faster training, efficient inference, and improved overall user experience.
 
 <!-- What it does -->
 ## What it does <img src="images/does.png" alt="png" width="30">
-Diagnosify employs sophisticated machine learning algorithms to analyze medical data and images. This enables it to deliver accurate predictions about disease presence, assisting medical experts in making informed decisions. The project develops specialized machine learning models for each disease category, finely tuned to recognize distinct brain disease characteristics. By integrating Intel oneAPIs, Diagnosify optimizes its performance, ensuring efficient use of hardware resources for quicker and more reliable predictions.
+Diagnosify employs sophisticated machine learning algorithms to analyze medical data and images. This enables it to deliver accurate predictions about disease presence, assisting medical experts in making informed decisions. The project develops specialized machine learning models for each disease category, finely tuned to recognize distinct brain disease characteristics. By integrating Intel® oneAPIs, Diagnosify optimizes its performance, ensuring efficient use of hardware resources for quicker and more reliable predictions.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
