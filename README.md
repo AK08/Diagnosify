@@ -8,7 +8,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/AK08/Disease-Classification.git">
-    <img src="images/Medical research-cuate.png" alt="Logo" width="600px" >
+    <img src="images/team.png" alt="Logo" width="600px" >
   </a>
 
   <h3 align="center">Diagnosify - Brain Disease Classification</h3>
