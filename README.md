@@ -168,7 +168,7 @@ Brain Tumor - https://github.com/aaronDev28/Brain-datasets/tree/main
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-https://github.com/
+
 [contributors-shield]: https://img.shields.io/github/contributors/AK08/Disease-Classification.svg?style=for-the-badge
 [contributors-url]: https://github.com/AK08/Disease-Classification/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/kottaram007/Smart-Garbage-Segregation.svg?style=for-the-badge
