@@ -19,16 +19,24 @@ cells_per_block = (2, 2)
 transform_sqrt = True
 block_norm = "L2"
 
-def preprocess_image(image):
-    image = image.convert("L")  # Convert to grayscale
+def preprocess_image(image_array):
+    # Convert the NumPy array to a PIL Image
+    image = Image.fromarray(image_array)
+
+    # Convert to grayscale
+    image = image.convert("L")
+
+    # Resize the image
     image = image.resize((200, 200))
-    image = np.array(image)
-    image = image.astype(np.uint8)
+
+    # Convert the PIL Image back to a NumPy array
+    image_array = np.array(image)
+    image_array = image_array.astype(np.uint8)
 
     # Apply thresholding
-    _, image = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
+    _, image_array = cv2.threshold(image_array, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
     
-    features = feature.hog(image,
+    features = feature.hog(image_array,
                            orientations=orientations,
                            pixels_per_cell=pixels_per_cell,
                            cells_per_block=cells_per_block,
