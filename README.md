@@ -8,7 +8,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/AK08/Smart-Garbage-Segregation">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="Medical research-cuate.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Smart Garbage Segregation</h3>
