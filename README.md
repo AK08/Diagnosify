@@ -11,7 +11,7 @@
     <img src="Medical research-cuate.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Smart Garbage Segregation</h3>
+  <h3 align="center">Diagnosify - Disease Classification</h3>
 
   <p align="center">
     Welcome to our project!
