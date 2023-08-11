@@ -8,18 +8,18 @@
 <br />
 <div align="center">
   <a href="https://github.com/AK08/Disease-Classification.git">
-    <img src="images/team.png" alt="Logo" width="600px" >
+    <img src="images/team.png" >
   </a>
 
-  <h3 align="center">Diagnosify - Brain Disease Classification</h3>
+  <h1 align="center">Diagnosify - Brain Disease Classification</h1>
 
   <p align="center">
     Welcome to our project!
     <br />
     <br />
-    <a href="diagnosify.streamlit.app/">View Video</a>
+    <a href="https://drive.google.com/file/d/1itKq5K-_9NWnvV7kbW4jGxd6lTLQHwen/view?usp=sharing">View Video</a>
     ·
-    <a href="diagnosify.streamlit.app/">View Demo</a>
+    <a href="https://diagnosify.streamlit.app/">View Deployment</a>
     .
   </p>
 </div>
@@ -154,6 +154,7 @@ In conclusion, our journey of building Diagnosify using oneDNN and Intel oneAPIs
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### References for Datasets
+<hr style="border: 0.5px solid #ddd;">
 
 Alzheimer - https://www.kaggle.com/datasets/sachinkumar413/alzheimer-mri-dataset
 
