@@ -171,12 +171,12 @@ Brain Tumor - https://github.com/aaronDev28/Brain-datasets/tree/main
 
 [contributors-shield]: https://img.shields.io/github/contributors/AK08/Disease-Classification.svg?style=for-the-badge
 [contributors-url]: https://github.com/AK08/Disease-Classification/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/kottaram007/Smart-Garbage-Segregation.svg?style=for-the-badge
-[forks-url]: https://github.com/kottaram007/Smart-Garbage-Segregation/network/members
-[stars-shield]: https://img.shields.io/github/stars/kottaram007/Smart-Garbage-Segregation.svg?style=for-the-badge
-[stars-url]: https://github.com/kottaram007/Smart-Garbage-Segregation/stargazers
-[issues-shield]: https://img.shields.io/github/issues/kottaram007/Smart-Garbage-Segregation.svg?style=for-the-badge
-[issues-url]: https://github.com/kottaram007/Smart-Garbage-Segregation/issues
+[forks-shield]: https://img.shields.io/github/forks/AK08/Disease-Classification.svg?style=for-the-badge
+[forks-url]: https://github.com/AK08/Disease-Classification/network/members
+[stars-shield]: https://img.shields.io/github/stars/AK08/Disease-Classification.svg?style=for-the-badge
+[stars-url]: https://github.com/AK08/Disease-Classification/stargazers
+[issues-shield]: https://img.shields.io/github/issues/AK08/Disease-Classification.svg?style=for-the-badge
+[issues-url]: https://github.com/AK08/Disease-Classification/issues
 
 [product-screenshot]: images/screenshot.png
 
