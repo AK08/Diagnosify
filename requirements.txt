@@ -9,4 +9,3 @@ scikit-learn-intelex
 openai
 xgboost
 scikit-image
-scikit-learn-intelex
