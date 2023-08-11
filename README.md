@@ -47,6 +47,7 @@
     <li><a href="#what-it-does">What it does</a></li>
     <li><a href="#how-we-built-it">How we built it</a></li>
     <li><a href="#what-we-learned">What we learned</a></li>
+    <li><a href="#references-for-datasets">References for datasets</a></li>
   </ol>
 </details>
 
@@ -94,11 +95,11 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Intel one api -->
-## Intel oneAPI <img src="images/oneapi2.png" alt="png" width="30">
+## Intel oneAPI
 Intel OneAPI is a comprehensive development platform for building high-performance, cross-architecture applications. It provides a unified programming model, tools, and libraries that allow developers to optimize their applications for Intel CPUs, GPUs, FPGAs, and other hardware. Intel OneAPI includes support for popular programming languages like C++, Python, and Fortran, as well as frameworks for deep learning, high-performance computing, and data analytics. With Intel OneAPI, developers can build applications that can run on a variety of hardware platforms, from edge devices to data centers, and take advantage of the performance benefits of Intel architectures.
 
 ### Use of oneDNN and TensorFlow in our project
-<img src="images/onednn.png" alt="png" width="700">
+
 OneDNN provides highly optimized routines for various deep learning operations, including convolution, pooling, normalization, and activation functions. By using oneDNN, you can expect faster execution times and better performance on modern CPUs, especially those with Intel processors.
 
 In this project <code>os.environ['TF_ENABLE_ONEDNN_OPTS'] = '1'</code> line sets an environment variable called <code>TF_ENABLE_ONEDNN_OPTS to '1'</code>. This enables the use of Intel's OneAPI Deep Neural Network Library (OneDNN) optimizations for TensorFlow on the system where this code is being run. OneDNN is a high-performance library for deep learning that is designed to optimize the performance of deep neural network computations on a variety of hardware platforms. By enabling OneDNN optimizations, this code may run faster on certain hardware architectures that are compatible with OneDNN. <strong>In this project, the Conv2D and Dense layers will be automatically optimized using oneDNN, which should result in faster training and inference times on compatible hardware.</strong>
@@ -125,7 +126,7 @@ These are the steps involved in making this project:
 * Writing the labels into a text file 'Labels.txt'
 * Model Creation
 * Model Compilation
-* Training the Model (batch_size = 32, epochs = 10)
+* Training the Model 
 * Testing Predictions
 * Saving model as 'modelnew.h5'
 * Deploying the Model as a Web Application using Streamlit
