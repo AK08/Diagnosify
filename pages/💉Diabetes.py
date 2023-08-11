@@ -4,17 +4,15 @@ import pickle
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
-model_file_path = 'C:\Alen\Work\Artistic\Github\Disease-Classification\models\model.pkl'
+# Use raw strings for file paths or use forward slashes
+model_file_path = r'C:\Alen\Work\Artistic\Github\Disease-Classification\models\model.pkl'
 model = pickle.load(open(model_file_path, 'rb'))
 
-csv_file_path = 'C:\Alen\Work\Artistic\Github\Disease-Classification\dataset\diabetes.csv'  # Provide the correct absolute path
+csv_file_path = r'C:\Alen\Work\Artistic\Github\Disease-Classification\dataset\diabetes.csv'  # Provide the correct absolute path
 dataset = pd.read_csv(csv_file_path)
-
 
 def main():
     st.title('Diabetes Predictor')
-
-    
 
     # Select relevant columns
     dataset_X = dataset.iloc[:, [1, 2, 5, 7]].values
