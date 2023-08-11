@@ -71,7 +71,7 @@ def main():
         prediction = model.predict([img_features])
 
         
-        if prediction[1]:
+        if prediction[0]:
             st.markdown("## Prediction: Parkinson's Disease :warning:")
             st.write("Parkinson's disease is a neurodegenerative disorder that affects movement control. It is a progressive disorder of the nervous system that primarily affects motor function.")
             st.markdown('<hr style="border: 1px solid #ddd;">', unsafe_allow_html=True)
