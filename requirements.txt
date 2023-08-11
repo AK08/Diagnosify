@@ -9,3 +9,4 @@ scikit-learn-intelex
 openai
 xgboost
 scikit-image
+opencv-python-headless
