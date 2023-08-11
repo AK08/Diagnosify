@@ -11,7 +11,7 @@
     <img src="images/Medical research-cuate.png" alt="Logo" width="600px" >
   </a>
 
-  <h3 align="center">Diagnosify - Disease Classification</h3>
+  <h3 align="center"><style color="green">D</style>iagnosify - Disease Classification</h3>
 
   <p align="center">
     Welcome to our project!
