@@ -20,7 +20,6 @@
     <a href="https://drive.google.com/file/d/1itKq5K-_9NWnvV7kbW4jGxd6lTLQHwen/view?usp=sharing">View Video</a>
     ·
     <a href="https://diagnosify.streamlit.app/">View Deployment</a>
-    .
   </p>
 </div>
 
@@ -41,7 +40,7 @@
     <li>
       <a href="#intel-oneapi">Intel OneAPI</a>
       <ul>
-        <li><a href="#use-of-onednn-in-our-project">Use of oneDNN and TensorFlow in our project</a></li>
+        <li><a href="#Use of oneAPI in our project">Use of oneDNN and TensorFlow in our project</a></li>
       </ul>
     </li>
     <li><a href="#what-it-does">What it does</a></li>
