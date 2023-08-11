@@ -19,7 +19,7 @@
     <br />
     <a href="diagnosify.streamlit.app/">View Video</a>
     ·
-    <a href="diagnosify.streamlit.app/">View Demo</a>
+    <a href="https://diagnosify.streamlit.app/">View Deployment</a>
     .
   </p>
 </div>
