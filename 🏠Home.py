@@ -12,7 +12,7 @@ st.write("# Welcome to Diagnosify! 👋")
 # Display the image
 image_path = "images/Medical research-amico.png"
 image = Image.open(image_path)
-resized_image = image.resize((500, 500))  # Adjust the size as needed
+resized_image = image.resize((500,500))  # Adjust the size as needed
 st.image(resized_image)
 
 st.markdown(
