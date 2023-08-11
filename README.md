@@ -32,7 +32,7 @@
     <li>
       <a href="#about-the-project">About the Project</a>
       <ul>
-        <li><a href="images/learn.png">Inspiration</a></li>
+        <li><a href="#inspiration">Inspiration</a></li>
         <li><a href=#social-impact>Social Impact</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
