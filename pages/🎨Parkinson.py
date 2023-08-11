@@ -4,6 +4,8 @@ import joblib
 import numpy as np
 from skimage import feature, color
 from skimage.transform import resize
+from PIL import Image
+
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
