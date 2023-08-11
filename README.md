@@ -16,14 +16,11 @@
   <p align="center">
     Welcome to our project!
     <br />
-    <a href="https://github.com/AK08/Disease-Classification.git"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://drive.google.com/file/d/1FttMlM96K5njpDYt_v4MtVvyPX62REhj/view">View Video</a>
     ·
     <a href="https://disease-classification-iw6otvksjeyykhxy2kvmuw.streamlit.app/Pneumonia">View Demo</a>
-    ·
-    <a href="https://github.com/AK08/Disease-Classification.git">Request Feature</a>
+    .
   </p>
 </div>
 
@@ -152,6 +149,18 @@ These are the steps involved in making this project:
 
 
 In conclusion, our journey of building Diagnosify using oneDNN and Intel oneAPIs has been a transformative experience that has enriched our understanding of cutting-edge technologies, healthcare applications, and the profound impact of responsible AI integration. This project has yielded a diverse array of insights, fostering growth in technical expertise, ethical considerations, collaboration, and real-world problem-solving. Through this endeavor, we have not only created a brain disease classification platform but also embarked on a significant learning journey with enduring implications.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### References for Datasets
+
+Alzheimer - https://www.kaggle.com/datasets/sachinkumar413/alzheimer-mri-dataset
+
+Stroke - https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
+
+Parkinsons - https://www.kaggle.com/datasets/kmader/parkinsons-drawings
+
+Brain Tumor - https://github.com/aaronDev28/Brain-datasets/tree/main
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
