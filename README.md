@@ -16,14 +16,10 @@
   <p align="center">
     Welcome to our project!
     <br />
-    <a href="https://github.com/AK08/Disease-Classification.git"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
     <a href="https://drive.google.com/file/d/1FttMlM96K5njpDYt_v4MtVvyPX62REhj/view">View Video</a>
     ·
     <a href="https://disease-classification-iw6otvksjeyykhxy2kvmuw.streamlit.app/Pneumonia">View Demo</a>
-    ·
-    <a href="https://github.com/AK08/Disease-Classification.git">Request Feature</a>
+    .
   </p>
 </div>
 
