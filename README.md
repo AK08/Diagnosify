@@ -120,7 +120,7 @@ To optimize deep learning applications on Intel® CPUs and GPUs, We integrated t
 <code>os.environ['TF_ENABLE_ONEDNN_OPTS'] = '1'
 os.environ['DNNL_ENGINE_LIMIT_CPU_CAPABILITIES'] = '0'</code> 
 
-Before training my models, We disabled the system allocator using the following code to enhance performance:
+Before training our models, We disabled the system allocator using the following code to enhance performance:
 
 <code>os.environ['TF_ONEDNN_USE_SYSTEM_ALLOCATOR'] = '0'</code>
 
@@ -158,16 +158,24 @@ And enabled Advanced Automatic Mixed Precision for improved inference speed and 
 Alzheimer's Disease Prediction and Brain Tumor Detection models are TensorFlow-based. For these, We used the Intel® Extension for TensorFlow* from the AI Kit, oneDAL, oneDPL and oneDNN to enhance performance. Parkinson's Disease Detector and Stroke Event Prediction models were optimized using the Intel® Extension for Scikit-learn from oneDAL.
 
 #### Performance Comparison
-The following graphs illustrate the substantial performance improvements achieved by integrating Intel® oneAPI libraries and frameworks into my Brain Disease Predictor App:
+The following graphs illustrate the substantial performance improvements achieved by integrating Intel® oneAPI libraries and frameworks into our models:
 
 1. Comparing execution time of model training for Alzheimer's Disease Prediction
 <a href="https://github.com/AK08/Disease-Classification.git">
     <img src="images/Alz.png" >
-</a>
-3. Comparing execution time of model training for Stroke Event Prediction (Best Model)
-4. Comparing execution time of model training for Parkinson's Disease Detector (Best Model)
-5. Comparing execution time of model training for Brain Tumor Prediction
-
+</a><br>
+2. Comparing execution time of model training for Stroke Event Prediction (Best Model)
+<a href="https://github.com/AK08/Disease-Classification.git">
+    <img src="images/Stroke.png" >
+</a><br>
+3. Comparing execution time of model training for Parkinson's Disease Detector (Best Model)
+<a href="https://github.com/AK08/Disease-Classification.git">
+    <img src="images/Parkinsons.png" >
+</a><br>
+4. Comparing execution time of model training for Brain Tumor Prediction
+<a href="https://github.com/AK08/Disease-Classification.git">
+    <img src="images/BrainTumor.png" >
+</a><br>
 
 By leveraging the power of Intel® oneAPI libraries and frameworks, our models achieves remarkable performance enhancements and optimized memory utilization across various disease prediction models. The seamless integration of oneDAL, oneDNN, oneDPL, and AI Kit contributes to faster training, efficient inference, and improved overall user experience.
 
