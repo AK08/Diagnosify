@@ -11,7 +11,7 @@
     <img src="images/Medical research-cuate.png" alt="Logo" width="600px" >
   </a>
 
-  <h3 align="center">Diagnosify - Disease Classification</h3>
+  <h3 align="center">Diagnosify - Brain Disease Classification</h3>
 
   <p align="center">
     Welcome to our project!
@@ -60,13 +60,13 @@
 <div align="center">
   <img src="images/SmartGarbage.gif" type="gif" alt="png" width="750">
 </div>
-Diagnosify is an innovative disease classification project designed to leverage the power of machine learning and Intel oneAPIs for accurate and efficient disease prediction. In the modern healthcare landscape, early and accurate diagnosis plays a pivotal role in ensuring timely medical interventions and improved patient outcomes. Diagnosify addresses this need by offering a platform that assists medical professionals in diagnosing various diseases using advanced machine learning techniques. The project focuses on the classification of diseases such as Brain Tumor, Alzheimer's Disease, Chest Diseases, Skin Diseases, and Lower Back Pain. This repository contains the code and resources used to train and deploy the disease classification models.
+Diagnosify is an innovative brain disease classification project designed to leverage the power of machine learning and Intel oneAPIs for accurate and efficient brain disease prediction. In the modern healthcare landscape, early and accurate diagnosis plays a pivotal role in ensuring timely medical interventions and improved patient outcomes. Diagnosify addresses this need by offering a platform that assists medical professionals in brain diagnosing various diseases using advanced machine learning techniques. The project focuses on the classification of diseases such as Brain Tumor, Alzheimer's Disease, Parkinson's Disease, and Stroke. This repository contains the code and resources used to train and deploy the disease classification models.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Inspiration <img src="images/inspo.png" alt="png" width="30">
-The inspiration behind the creation of Diagnosify stems from the pressing need for more accurate, efficient, and accessible methods of disease diagnosis in the modern healthcare landscape. The convergence of medical expertise and technological advancements has the potential to revolutionize the way diseases are detected and treated. Several key factors have motivated the inception of Diagnosify:
+The inspiration behind the creation of Diagnosify stems from the pressing need for more accurate, efficient, and accessible methods of brain disease diagnosis in the modern healthcare landscape. The convergence of medical expertise and technological advancements has the potential to revolutionize the way diseases are detected and treated. Several key factors have motivated the inception of Diagnosify:
 
 1. <b>Early Detection and Intervention: </b> Timely detection of diseases is often a critical factor in determining patient outcomes. Many medical conditions, such as brain tumors and neurodegenerative disorders like Alzheimer's disease, can exhibit subtle symptoms in their early stages. Diagnosify seeks to provide healthcare professionals with tools that enable them to identify these diseases at an early phase, leading to more effective treatment strategies and improved patient quality of life.
 
@@ -75,9 +75,9 @@ The inspiration behind the creation of Diagnosify stems from the pressing need f
 3. <b>Technological Advancements in Medical Imaging: </b> The rapid advancements in medical imaging technologies, such as MRI, CT scans, and dermatological imaging, have led to an abundance of data that can potentially be harnessed for disease diagnosis. Diagnosify leverages these technologies to analyze intricate medical images and data, extracting valuable insights that can aid in disease classification.
 
 ### Social Impact <img src="images/impact.png" alt="png" width="30">
-The "Diagnosify - Disease Classification" project has the potential to create significant social impact in several ways:
+The "Diagnosify - Brain Disease Classification" project has the potential to create significant social impact in several ways:
 
-1. Early Detection and Treatment: By accurately predicting diseases like brain tumors, Alzheimer's, chest diseases, skin diseases, and lower back pain, the project can enable early detection and intervention. Early diagnosis often leads to more effective treatment options and improved patient outcomes.
+1. Early Detection and Treatment: By accurately predicting diseases like brain tumors, Alzheimer's, Parkinson's Disease and, Stroke, the project can enable early detection and intervention. Early diagnosis often leads to more effective treatment options and improved patient outcomes.
 2. Healthcare Access: Diagnosify can extend medical expertise to underserved and remote areas where access to specialized healthcare may be limited. This democratization of medical diagnosis can ensure that individuals in various geographical locations receive timely and accurate predictions.
 3. Reduced Misdiagnosis: Machine learning algorithms used in the project can help reduce instances of misdiagnosis by analyzing intricate patterns that might be challenging for human experts to identify. This can prevent unnecessary treatments and procedures while increasing the accuracy of diagnoses.
 
@@ -112,7 +112,7 @@ Finally, the <code>model.compile</code> method is called to configure the optimi
 
 <!-- What it does -->
 ## What it does <img src="images/does.png" alt="png" width="30">
-Diagnosify employs sophisticated machine learning algorithms to analyze medical data and images. This enables it to deliver accurate predictions about disease presence, assisting medical experts in making informed decisions. The project develops specialized machine learning models for each disease category, finely tuned to recognize distinct disease characteristics. By integrating Intel oneAPIs, Diagnosify optimizes its performance, ensuring efficient use of hardware resources for quicker and more reliable predictions.
+Diagnosify employs sophisticated machine learning algorithms to analyze medical data and images. This enables it to deliver accurate predictions about disease presence, assisting medical experts in making informed decisions. The project develops specialized machine learning models for each disease category, finely tuned to recognize distinct brain disease characteristics. By integrating Intel oneAPIs, Diagnosify optimizes its performance, ensuring efficient use of hardware resources for quicker and more reliable predictions.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,7 +136,7 @@ These are the steps involved in making this project:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## What we learned <img src="images/learn.png" alt="png" width="30">
-✅Building Diagnosify using oneDNN and Intel oneAPIs has been a transformative journey, providing us with a deep understanding of cutting-edge technologies and their practical applications in the field of disease classification. Here's a summary of key learnings from this experience:
+✅Building Diagnosify using oneDNN and Intel oneAPIs has been a transformative journey, providing us with a deep understanding of cutting-edge technologies and their practical applications in the field of brain disease classification. Here's a summary of key learnings from this experience:
 
 ✅ Hardware Optimization Expertise: Working with oneDNN and Intel oneAPIs exposed us to advanced techniques for optimizing machine learning models on diverse hardware architectures. We gained insights into harnessing the full potential of CPUs, GPUs, and other accelerators, enhancing our ability to design efficient and high-performance solutions.
 
@@ -144,14 +144,14 @@ These are the steps involved in making this project:
 
 ✅Hardware-Agnostic Deployment: The ability to deploy our models seamlessly on various hardware architectures showcased the power of hardware-agnostic solutions. We gained confidence in creating versatile applications that can adapt to different computing environments.
 
-✅Model Evaluation:  Working with oneDNN and Intel oneAPIs encouraged us to iterate on model architectures and hyperparameters. We gained proficiency in fine-tuning models for optimal accuracy and performance, resulting in refined disease prediction capabilities.
+✅Model Evaluation:  Working with oneDNN and Intel oneAPIs encouraged us to iterate on model architectures and hyperparameters. We gained proficiency in fine-tuning models for optimal accuracy and performance, resulting in refined brain disease prediction capabilities.
 
 ✅Educational Impact: The project's use of advanced technologies like oneDNN and Intel oneAPIs presented opportunities for educational outreach. We learned to convey complex technical concepts to wider audiences, promoting awareness of AI's potential in healthcare.
 
 ✅Innovation at the Intersection: Diagnosify's creation at the intersection of medicine and technology highlighted the potential for innovative solutions that bridge disciplines. We gained insights into the challenges and rewards of interdisciplinary projects.
 
 
-In conclusion, our journey of building Diagnosify using oneDNN and Intel oneAPIs has been a transformative experience that has enriched our understanding of cutting-edge technologies, healthcare applications, and the profound impact of responsible AI integration. This project has yielded a diverse array of insights, fostering growth in technical expertise, ethical considerations, collaboration, and real-world problem-solving. Through this endeavor, we have not only created a disease classification platform but also embarked on a significant learning journey with enduring implications.
+In conclusion, our journey of building Diagnosify using oneDNN and Intel oneAPIs has been a transformative experience that has enriched our understanding of cutting-edge technologies, healthcare applications, and the profound impact of responsible AI integration. This project has yielded a diverse array of insights, fostering growth in technical expertise, ethical considerations, collaboration, and real-world problem-solving. Through this endeavor, we have not only created a brain disease classification platform but also embarked on a significant learning journey with enduring implications.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
