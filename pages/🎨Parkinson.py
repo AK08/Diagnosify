@@ -1,9 +1,9 @@
 import streamlit as st
-from PIL import Image
 import os
 import joblib
 import numpy as np
-from skimage import feature
+from skimage import feature, color
+from skimage.transform import resize
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -19,30 +19,25 @@ cells_per_block = (2, 2)
 transform_sqrt = True
 block_norm = "L2"
 
-def preprocess_image(image_array):
-    # Convert the NumPy array to a PIL Image
-    image = Image.fromarray(image_array)
-
-    # Convert to grayscale
-    image = image.convert("L")
+def preprocess_image(image):
+    # Convert the image to grayscale
+    image_gray = color.rgb2gray(image)
 
     # Resize the image
-    image = image.resize((200, 200))
-
-    # Convert the PIL Image back to a NumPy array
-    image_array = np.array(image)
-    image_array = image_array.astype(np.uint8)
+    image_resized = resize(image_gray, (200, 200), anti_aliasing=True)
 
     # Apply thresholding
-    _, image_array = cv2.threshold(image_array, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
-    
-    features = feature.hog(image_array,
+    threshold = 0.5  # You can adjust the threshold value
+    image_thresholded = (image_resized > threshold).astype(np.uint8)
+
+    features = feature.hog(image_thresholded,
                            orientations=orientations,
                            pixels_per_cell=pixels_per_cell,
                            cells_per_block=cells_per_block,
                            transform_sqrt=transform_sqrt,
                            block_norm=block_norm)
     return features
+
 
 def main():
     st.title("Parkinson's Disease Detector")
