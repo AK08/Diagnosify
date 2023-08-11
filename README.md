@@ -7,25 +7,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/AK08/Smart-Garbage-Segregation">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/AK08/Disease-Classification.git">
+    <img src="images/Medical research-cuate.png" alt="Logo" width="600px" >
   </a>
 
-  <h3 align="center">Smart Garbage Segregation</h3>
+  <h3 align="center">Diagnosify - Disease Classification</h3>
 
   <p align="center">
     Welcome to our project!
     <br />
-    <a href="https://github.com/AK08/Smart-Garbage-Segregation"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/AK08/Disease-Classification.git"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://drive.google.com/file/d/1FttMlM96K5njpDYt_v4MtVvyPX62REhj/view">View Video</a>
     ·
-    <a href="https://raison024-smart-garbage-segregation-deploymentapp-lfq9yb.streamlit.app/">View Demo</a>
+    <a href="https://disease-classification-iw6otvksjeyykhxy2kvmuw.streamlit.app/Pneumonia">View Demo</a>
     ·
-    <a href="https://github.com/AK08/Smart-Garbage-Segregation/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/AK08/Smart-Garbage-Segregation/issues">Request Feature</a>
+    <a href="https://github.com/AK08/Disease-Classification.git">Request Feature</a>
   </p>
 </div>
 
