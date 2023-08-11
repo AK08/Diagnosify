@@ -22,7 +22,7 @@ h1, h2, h3 {
 )
 
 # Main content
-st.title("Welcome to Brain Diagnosify! 👋")
+st.title("Welcome to Diagnosify! 👋")
 
 # Display the image
 image_path = "images/brain chemistry-cuate.png"
