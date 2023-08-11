@@ -1,7 +1,7 @@
 import openai
 import streamlit as st
 
-st.title("ChatGPT-like ChatBot")
+st.title("MediBot")
 
 openai.api_key = st.secrets['openai']
 
