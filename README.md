@@ -40,7 +40,7 @@
     <li>
       <a href="#intel-oneapi">Intel® OneAPI</a>
       <ul>
-        <li><a href="#Use of oneAPI in our project">Use of oneDNN and TensorFlow in our project</a></li>
+        <li><a href="#intel-oneapi">Use of oneAPI in our project</a></li>
       </ul>
     </li>
     <li><a href="#what-it-does">What it does</a></li>
@@ -85,7 +85,6 @@ The "Diagnosify - Brain Disease Classification" project has the potential to cre
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [![oneapi][oneapi]][oneapi-url]
-  * [![onednn][onednn]][onednn-url]
 * [![python][python]][python-url]
 * [![jupyter][jupyter]][jupyter-url]
 * [![tensorflow][tensorflow]][tensorflow-url]
@@ -96,14 +95,14 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- Intel one api -->
 ## Intel® oneAPI
 Intel® OneAPI is a comprehensive development platform for building high-performance, cross-architecture applications. It provides a unified programming model, tools, and libraries that allow developers to optimize their applications for Intel® CPUs, GPUs, FPGAs, and other hardware. Intel® OneAPI includes support for popular programming languages like C++, Python, and Fortran, as well as frameworks for deep learning, high-performance computing, and data analytics. With Intel® OneAPI, developers can build applications that can run on a variety of hardware platforms, and take advantage of the performance benefits of Intel® architectures.
-
+<!-- Use of oneAPI in our project -->
 ### Use of oneAPI in our project
 
 In this section, we'll outline how we utilized various Intel® oneAPI libraries and frameworks to enhance the performance and efficiency of our models.
 
-* oneAPI Data Analytics Library (oneDAL)
+* <b>Intel® oneAPI Data Analytics Library (oneDAL)</b>
 
-The oneAPI Data Analytics Library (oneDAL) is a versatile machine learning library that accelerates big data analysis at all stages of the pipeline. To leverage the power of oneDAL, I employed the Intel® Extension for Scikit-learn*, an integral part of oneDAL that enhances existing scikit-learn code by patching it.
+The oneAPI Data Analytics Library (oneDAL) is a versatile machine learning library that accelerates big data analysis at all stages of the pipeline. To leverage the power of oneDAL, We employed the Intel® Extension for Scikit-learn*, an integral part of oneDAL that enhances existing scikit-learn code by patching it.
 
 Installation:
 <code>pip install scikit-learn-intelex</code> 
@@ -112,42 +111,42 @@ Usage:<br>
 <code>from sklearnex import patch_sklearn
 patch_sklearn()</code>
 
-By integrating Intel® Extension for Scikit-learn*, I achieved substantial acceleration, with performance gains ranging from 10x to 100x across various applications.
+By integrating Intel® Extension for Scikit-learn*, We achieved substantial acceleration, with performance gains ranging from 10x to 100x across various applications.
 
-* oneAPI Deep Neural Network Library (oneDNN)
+* <b>Intel® oneAPI Deep Neural Network Library (oneDNN)</b>
 
-To optimize deep learning applications on Intel® CPUs and GPUs, I integrated the oneAPI Deep Neural Network Library (oneDNN). To enable oneDNN optimizations for TensorFlow* running on Intel® hardware, I used the following code:
+To optimize deep learning applications on Intel® CPUs and GPUs, We integrated the oneAPI Deep Neural Network Library (oneDNN). To enable oneDNN optimizations for TensorFlow* running on Intel® hardware, We used the following code:
 
 <code>os.environ['TF_ENABLE_ONEDNN_OPTS'] = '1'
 os.environ['DNNL_ENGINE_LIMIT_CPU_CAPABILITIES'] = '0'</code> 
 
-Before training my models, I disabled the system allocator using the following code to enhance performance:
+Before training my models, We disabled the system allocator using the following code to enhance performance:
 
 <code>os.environ['TF_ONEDNN_USE_SYSTEM_ALLOCATOR'] = '0'</code>
 
-After training and before inference, I re-enabled the system allocator using:
+After training and before inference, We re-enabled the system allocator using:
 
 <code>os.environ['TF_ONEDNN_USE_SYSTEM_ALLOCATOR'] = '1'</code>
 
-Moreover, I assumed frozen weights for inference using:
+Moreover, We assumed frozen weights for inference using:
 
 <code>os.environ['TF_ONEDNN_ASSUME_FROZEN_WEIGHTS'] = '1'</code>
 
-* Intel® oneAPI DPC++ Library (oneDPL)
+* <b>Intel® oneAPI DPC++ Library (oneDPL)</b>
 
-The Intel® oneAPI DPC++ Library (oneDPL) aims to simplify SYCL* programming efforts across devices for high-performance parallel applications. I harnessed the power of oneDPL using specific environment variables to optimize performance and memory utilization.
+The Intel® oneAPI DPC++ Library (oneDPL) aims to simplify SYCL* programming efforts across devices for high-performance parallel applications. We harnessed the power of oneDPL using specific environment variables to optimize performance and memory utilization.
 
 <code>os.environ['ONEAPI_DEVICE_SELECTOR'] = 'opencl:*'
 os.environ['SYCL_ENABLE_DEFAULT_CONTEXTS'] = '1'
 os.environ['SYCL_ENABLE_FUSION_CACHING'] = '1'</code>
 
-* Intel® oneAPI AI Analytics Toolkit (AI Kit)
+* <b>Intel® oneAPI AI Analytics Toolkit (AI Kit)</b>
 
-The Intel® oneAPI AI Analytics Toolkit (AI Kit) offers an integrated solution for preprocessing, machine learning, and model development. To optimize deep learning training on Intel® XPUs and streamline inference, I utilized the toolkit's Intel®-optimized deep-learning frameworks for TensorFlow*.
+The Intel® oneAPI AI Analytics Toolkit (AI Kit) offers an integrated solution for preprocessing, machine learning, and model development. To optimize deep learning training on Intel® XPUs and streamline inference, We utilized the toolkit's Intel®-optimized deep-learning frameworks for TensorFlow*.
 
 <code>pip install --upgrade intel-extension-for-tensorflow[cpu]</code>
 
-I set the backend type to CPU for Intel® Tensorflow Operator Optimization:
+We set the backend type to CPU for Intel® Tensorflow Operator Optimization:
 
 <code>os.environ['ITEX_XPU_BACKEND'] = 'CPU'</code>
 
@@ -156,7 +155,7 @@ And enabled Advanced Automatic Mixed Precision for improved inference speed and 
 <code>os.environ['ITEX_AUTO_MIXED_PRECISION'] = '1'</code>
 
 #### Model Specifics and Usage
-Alzheimer's Disease Prediction and Brain Tumor Detection models are TensorFlow-based. For these, I used the Intel® Extension for TensorFlow* from the AI Kit, oneDAL, oneDPL and oneDNN to enhance performance. Parkinson's Disease Detector and Stroke Event Prediction models were optimized using the Intel® Extension for Scikit-learn from oneDAL.
+Alzheimer's Disease Prediction and Brain Tumor Detection models are TensorFlow-based. For these, We used the Intel® Extension for TensorFlow* from the AI Kit, oneDAL, oneDPL and oneDNN to enhance performance. Parkinson's Disease Detector and Stroke Event Prediction models were optimized using the Intel® Extension for Scikit-learn from oneDAL.
 
 #### Performance Comparison
 The following graphs illustrate the substantial performance improvements achieved by integrating Intel® oneAPI libraries and frameworks into my Brain Disease Predictor App:
