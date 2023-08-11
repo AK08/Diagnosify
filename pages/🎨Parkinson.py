@@ -2,7 +2,6 @@ import streamlit as st
 from PIL import Image
 import os
 import joblib
-import cv2
 import numpy as np
 from skimage import feature
 
