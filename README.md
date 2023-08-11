@@ -175,7 +175,7 @@ The following graphs illustrate the substantial performance improvements achieve
 4. Comparing execution time of model training for Brain Tumor Prediction<br><br>
 <a href="https://github.com/AK08/Disease-Classification.git">
     <img src="images/BrainTumor.png" >
-</a><br>
+</a><br><br>
 
 By leveraging the power of Intel® oneAPI libraries and frameworks, our models achieves remarkable performance enhancements and optimized memory utilization across various disease prediction models. The seamless integration of oneDAL, oneDNN, oneDPL, and AI Kit contributes to faster training, efficient inference, and improved overall user experience.
 
