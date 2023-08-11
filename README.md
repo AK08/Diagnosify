@@ -101,7 +101,7 @@ Intel® OneAPI is a comprehensive development platform for building high-perform
 
 In this section, we'll outline how we utilized various Intel® oneAPI libraries and frameworks to enhance the performance and efficiency of our models.
 
-* oneAPI Data Analytics Library (oneDAL)
+* <b>Intel® oneAPI Data Analytics Library (oneDAL)</b>
 
 The oneAPI Data Analytics Library (oneDAL) is a versatile machine learning library that accelerates big data analysis at all stages of the pipeline. To leverage the power of oneDAL, I employed the Intel® Extension for Scikit-learn*, an integral part of oneDAL that enhances existing scikit-learn code by patching it.
 
@@ -114,7 +114,7 @@ patch_sklearn()</code>
 
 By integrating Intel® Extension for Scikit-learn*, I achieved substantial acceleration, with performance gains ranging from 10x to 100x across various applications.
 
-* oneAPI Deep Neural Network Library (oneDNN)
+* <b>Intel® oneAPI Deep Neural Network Library (oneDNN)</b>
 
 To optimize deep learning applications on Intel® CPUs and GPUs, I integrated the oneAPI Deep Neural Network Library (oneDNN). To enable oneDNN optimizations for TensorFlow* running on Intel® hardware, I used the following code:
 
@@ -133,7 +133,7 @@ Moreover, I assumed frozen weights for inference using:
 
 <code>os.environ['TF_ONEDNN_ASSUME_FROZEN_WEIGHTS'] = '1'</code>
 
-* Intel® oneAPI DPC++ Library (oneDPL)
+* <b>Intel® oneAPI DPC++ Library (oneDPL)</b>
 
 The Intel® oneAPI DPC++ Library (oneDPL) aims to simplify SYCL* programming efforts across devices for high-performance parallel applications. I harnessed the power of oneDPL using specific environment variables to optimize performance and memory utilization.
 
@@ -141,7 +141,7 @@ The Intel® oneAPI DPC++ Library (oneDPL) aims to simplify SYCL* programming eff
 os.environ['SYCL_ENABLE_DEFAULT_CONTEXTS'] = '1'
 os.environ['SYCL_ENABLE_FUSION_CACHING'] = '1'</code>
 
-* Intel® oneAPI AI Analytics Toolkit (AI Kit)
+* <b>Intel® oneAPI AI Analytics Toolkit (AI Kit)</b>
 
 The Intel® oneAPI AI Analytics Toolkit (AI Kit) offers an integrated solution for preprocessing, machine learning, and model development. To optimize deep learning training on Intel® XPUs and streamline inference, I utilized the toolkit's Intel®-optimized deep-learning frameworks for TensorFlow*.
 
