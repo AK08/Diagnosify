@@ -1,7 +1,9 @@
 import openai
 import streamlit as st
 
-st.title("MediBot")
+st.title("NeuroBot")
+st.markdown("##### Welcome to NeuroBot AI Assistant, your companion for brain disease information!")
+
 
 openai.api_key = st.secrets['openai']
 
