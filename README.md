@@ -40,7 +40,7 @@
     <li>
       <a href="#intel-oneapi">Intel® OneAPI</a>
       <ul>
-        <li><a href="#Use of oneAPI in our project">Use of oneAPI in our project</a></li>
+        <li><a href="#intel-oneapi">Use of oneAPI in our project</a></li>
       </ul>
     </li>
     <li><a href="#what-it-does">What it does</a></li>
