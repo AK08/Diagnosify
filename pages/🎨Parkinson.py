@@ -20,9 +20,14 @@ transform_sqrt = True
 block_norm = "L2"
 
 def preprocess_image(image):
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    image = cv2.resize(image, (200, 200))
-    image = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
+    image = image.convert("L")  # Convert to grayscale
+    image = image.resize((200, 200))
+    image = np.array(image)
+    image = image.astype(np.uint8)
+
+    # Apply thresholding
+    _, image = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
+    
     features = feature.hog(image,
                            orientations=orientations,
                            pixels_per_cell=pixels_per_cell,
