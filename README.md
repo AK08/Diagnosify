@@ -160,19 +160,19 @@ Alzheimer's Disease Prediction and Brain Tumor Detection models are TensorFlow-b
 #### Performance Comparison
 The following graphs illustrate the substantial performance improvements achieved by integrating Intel® oneAPI libraries and frameworks into our models:
 
-1. Comparing execution time of model training for Alzheimer's Disease Prediction
+1. Comparing execution time of model training for Alzheimer's Disease Prediction<br>
 <a href="https://github.com/AK08/Disease-Classification.git">
     <img src="images/Alz.png" >
 </a><br>
-2. Comparing execution time of model training for Stroke Event Prediction (Best Model)
+2. Comparing execution time of model training for Stroke Event Prediction (Best Model)<br>
 <a href="https://github.com/AK08/Disease-Classification.git">
     <img src="images/Stroke.png" >
 </a><br>
-3. Comparing execution time of model training for Parkinson's Disease Detector (Best Model)
+3. Comparing execution time of model training for Parkinson's Disease Detector (Best Model)<br>
 <a href="https://github.com/AK08/Disease-Classification.git">
     <img src="images/Parkinsons.png" >
 </a><br>
-4. Comparing execution time of model training for Brain Tumor Prediction
+4. Comparing execution time of model training for Brain Tumor Prediction<br>
 <a href="https://github.com/AK08/Disease-Classification.git">
     <img src="images/BrainTumor.png" >
 </a><br>
