@@ -1,11 +1,10 @@
 import streamlit as st
+from PIL import Image
 import os
 import joblib
+import cv2
 import numpy as np
-from skimage import feature, color
-from skimage.transform import resize
-from PIL import Image
-
+from skimage import feature
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -22,17 +21,10 @@ transform_sqrt = True
 block_norm = "L2"
 
 def preprocess_image(image):
-    # Convert the image to grayscale
-    image_gray = color.rgb2gray(image)
-
-    # Resize the image
-    image_resized = resize(image_gray, (200, 200), anti_aliasing=True)
-
-    # Apply thresholding
-    threshold = 0.5  # You can adjust the threshold value
-    image_thresholded = (image_resized > threshold).astype(np.uint8)
-
-    features = feature.hog(image_thresholded,
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    image = cv2.resize(image, (200, 200))
+    image = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
+    features = feature.hog(image,
                            orientations=orientations,
                            pixels_per_cell=pixels_per_cell,
                            cells_per_block=cells_per_block,
@@ -40,6 +32,34 @@ def preprocess_image(image):
                            block_norm=block_norm)
     return features
 
+def main():
+    st.title("Parkinson's Disease Detector")
+    st.success("🟢 **World's first publicly accessible Parkinson's Disease Detector** (based on spiral and wave drawings).")
+
+    # Model selection dropdown
+    model_option = st.selectbox("Select Model", ("Spiral", "Wave"))
+
+    uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
+
+    if uploaded_file is not None:
+        image = Image.open(uploaded_file)
+        st.image(image, caption="Uploaded Image", use_column_width=True)
+        st.write("")
+        st.write("Classifying...")
+
+        # Preprocess the uploaded image
+        img_array = np.array(image)
+        img_features = preprocess_image(img_array)
+
+        # Construct the absolute path for the selected model
+        model_filename = "random_forest_spiral_model.pkl" if model_option == "Spiral" else "random_forest_wave_model.pkl"
+        model_path = os.path.join(script_dir, model_filename)
+
+        # Load the selected trained model
+        model = joblib.load(model_path)
+        
+        # Predict using the model
+        prediction = model.predict([img_features])
 
 def main():
     st.title("Parkinson's Disease Detector")
