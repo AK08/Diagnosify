@@ -81,8 +81,7 @@ The "Diagnosify - Brain Disease Classification" project has the potential to cre
 4. Collaborative Healthcare: The project promotes collaboration between medical professionals and technology. This synergy can lead to a more comprehensive understanding of diseases and their characteristics, fostering a collaborative approach to healthcare.
 
 ### Built With <img src="images/built.png" alt="png" width="30">
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+The power of Intel oneAPI, Python, Jupyter, TensorFlow, and Streamlit to create an innovative solution for predicting brain diseases using machine learning. Python's versatility and readability serve as the foundation, while Jupyter notebooks facilitate interactive model development. TensorFlow powers the machine learning model construction and training. Intel oneAPI enhances computational performance, enabling efficient predictions. Streamlit simplifies the deployment process by transforming the project into an interactive web application, allowing users to input data and receive predictions seamlessly.
 
 * [![oneapi][oneapi]][oneapi-url]
 * [![python][python]][python-url]
