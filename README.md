@@ -59,6 +59,8 @@
 </div>
 Diagnosify is an innovative brain disease classification project designed to leverage the power of machine learning and Intel® oneAPIs for accurate and efficient brain disease prediction. In the modern healthcare landscape, early and accurate diagnosis plays a pivotal role in ensuring timely medical interventions and improved patient outcomes. Diagnosify addresses this need by offering a platform that assists medical professionals in brain diagnosing various diseases using advanced machine learning techniques. The project focuses on the classification of diseases such as Brain Tumor, Alzheimer's Disease, Parkinson's Disease, and Stroke. This repository contains the code and resources used to train and deploy the disease classification models.
 
+### All of our models have an accuracy of 94%+.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -158,7 +160,6 @@ Alzheimer's Disease Prediction and Brain Tumor Detection models are TensorFlow-b
 
 ### Performance Comparison
 The following graphs illustrate the substantial performance improvements achieved by integrating Intel® oneAPI libraries and frameworks into our models:
-
 1. Comparing execution time of model training for Alzheimer's Disease Prediction<br><br>
 <a href="https://github.com/AK08/Disease-Classification.git">
     <img src="images/Alz.png" >
