@@ -89,6 +89,5 @@ st.markdown('<hr style="border: 1px solid #ddd;">', unsafe_allow_html=True)
 
 st.write("## References for Dataset")
 st.markdown("[Alzheimer Dataset](https://www.kaggle.com/datasets/sachinkumar413/alzheimer-mri-dataset)")
-st.markdown("[Stroke Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)")
 st.markdown("[Parkinsons Dataset](https://www.kaggle.com/datasets/kmader/parkinsons-drawings)")
 st.markdown("[Brain Tumor Git](https://github.com/aaronDev28/Brain-datasets/tree/main)")
