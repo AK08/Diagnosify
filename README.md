@@ -57,7 +57,7 @@
 <div align="center">
   <img src="images/Medical research-cuate.png" type="gif" alt="png" width="750">
 </div>
-Diagnosify is an innovative brain disease classification project designed to leverage the power of machine learning and Intel® oneAPIs for accurate and efficient brain disease prediction. In the modern healthcare landscape, early and accurate diagnosis plays a pivotal role in ensuring timely medical interventions and improved patient outcomes. Diagnosify addresses this need by offering a platform that assists medical professionals in brain diagnosing various diseases using advanced machine learning techniques. The project focuses on the classification of diseases such as Brain Tumor, Alzheimer's Disease, Parkinson's Disease, and Stroke. This repository contains the code and resources used to train and deploy the disease classification models.
+Diagnosify is an innovative brain disease classification project designed to leverage the power of machine learning and Intel® oneAPIs for accurate and efficient brain disease prediction. In the modern healthcare landscape, early and accurate diagnosis plays a pivotal role in ensuring timely medical interventions and improved patient outcomes. Diagnosify addresses this need by offering a platform that assists medical professionals in brain diagnosing various diseases using advanced machine learning techniques. The project focuses on the classification of diseases such as Brain Tumor, Alzheimer's Disease and Parkinson's Disease. This repository contains the code and resources used to train and deploy the disease classification models.
 
 #### All of our models have an accuracy of 94%+.
 
@@ -76,7 +76,7 @@ The inspiration behind the creation of Diagnosify stems from the pressing need f
 ### Social Impact <img src="images/impact.png" alt="png" width="30">
 The "Diagnosify - Brain Disease Classification" project has the potential to create significant social impact in several ways:
 
-1. Early Detection and Treatment: By accurately predicting diseases like brain tumors, Alzheimer's, Parkinson's Disease and, Stroke, the project can enable early detection and intervention. Early diagnosis often leads to more effective treatment options and improved patient outcomes.
+1. Early Detection and Treatment: By accurately predicting diseases like brain tumors, Alzheimer's, and Parkinson's Disease, the project can enable early detection and intervention. Early diagnosis often leads to more effective treatment options and improved patient outcomes.
 2. Healthcare Access: Diagnosify can extend medical expertise to underserved and remote areas where access to specialized healthcare may be limited. This democratization of medical diagnosis can ensure that individuals in various geographical locations receive timely and accurate predictions.
 3. Reduced Misdiagnosis: Machine learning algorithms used in the project can help reduce instances of misdiagnosis by analyzing intricate patterns that might be challenging for human experts to identify. This can prevent unnecessary treatments and procedures while increasing the accuracy of diagnoses.
 
@@ -156,7 +156,7 @@ And enabled Advanced Automatic Mixed Precision for improved inference speed and 
 <code>os.environ['ITEX_AUTO_MIXED_PRECISION'] = '1'</code>
 
 #### Model Specifics and Usage
-Alzheimer's Disease Prediction and Brain Tumor Detection models are TensorFlow-based. For these, We used the Intel® Extension for TensorFlow* from the AI Kit, oneDAL, oneDPL and oneDNN to enhance performance. Parkinson's Disease Detector and Stroke Event Prediction models were optimized using the Intel® Extension for Scikit-learn from oneDAL.
+Alzheimer's Disease Prediction and Brain Tumor Detection models are TensorFlow-based. For these, We used the Intel® Extension for TensorFlow* from the AI Kit, oneDAL, oneDPL and oneDNN to enhance performance. Parkinson's Disease Detector was optimized using the Intel® Extension for Scikit-learn from oneDAL.
 
 ### Performance Comparison
 The following graphs illustrate the substantial performance improvements achieved by integrating Intel® oneAPI libraries and frameworks into our models:
@@ -164,15 +164,11 @@ The following graphs illustrate the substantial performance improvements achieve
 <a href="https://github.com/AK08/Disease-Classification.git">
     <img src="images/Alz.png" >
 </a><br><br>
-2. Comparing execution time of model training for Stroke Event Prediction (Best Model)<br><br>
-<a href="https://github.com/AK08/Disease-Classification.git">
-    <img src="images/Stroke.png" >
-</a><br><br>
-3. Comparing execution time of model training for Parkinson's Disease Detector (Best Model)<br><br>
+2. Comparing execution time of model training for Parkinson's Disease Detector (Best Model)<br><br>
 <a href="https://github.com/AK08/Disease-Classification.git">
     <img src="images/Parkinsons.png" >
 </a><br><br>
-4. Comparing execution time of model training for Brain Tumor Prediction<br><br>
+3. Comparing execution time of model training for Brain Tumor Prediction<br><br>
 <a href="https://github.com/AK08/Disease-Classification.git">
     <img src="images/BrainTumor.png" >
 </a><br><br>
@@ -228,8 +224,6 @@ In conclusion, our journey of building Diagnosify using oneDNN and Intel oneAPIs
 <hr style="border: 0.5px solid #ddd;">
 
 Alzheimer - https://www.kaggle.com/datasets/sachinkumar413/alzheimer-mri-dataset
-
-Stroke - https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
 
 Parkinsons - https://www.kaggle.com/datasets/kmader/parkinsons-drawings
 
