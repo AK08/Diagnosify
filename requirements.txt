@@ -2,7 +2,8 @@ streamlit
 tensorflow
 pillow
 werkzeug
-scikit-learnpandas
+scikit-learn
+pandas
 numpy
 scikit-learn-intelex
 openai
