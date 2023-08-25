@@ -7,7 +7,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/AK08/Disease-Classification.git">
+  <a href="https://github.com/AK08/Diagnosify.git">
     <img src="images/team.png" >
   </a>
 
@@ -163,15 +163,15 @@ Alzheimer's Disease Prediction and Brain Tumor Detection models are TensorFlow-b
 ### Performance Comparison
 The following graphs illustrate the substantial performance improvements achieved by integrating Intel® oneAPI libraries and frameworks into our models:
 1. Comparing execution time of model training for Alzheimer's Disease Prediction<br><br>
-<a href="https://github.com/AK08/Disease-Classification.git">
+<a href="https://github.com/AK08/Diagnosify.git">
     <img src="images/Alz.png" >
 </a><br><br>
 2. Comparing execution time of model training for Parkinson's Disease Detector (Best Model)<br><br>
-<a href="https://github.com/AK08/Disease-Classification.git">
+<a href="https://github.com/AK08/Diagnosify.git">
     <img src="images/Parkinsons.png" >
 </a><br><br>
 3. Comparing execution time of model training for Brain Tumor Prediction<br><br>
-<a href="https://github.com/AK08/Disease-Classification.git">
+<a href="https://github.com/AK08/Diagnosify.git">
     <img src="images/BrainTumor.png" >
 </a><br><br>
 
@@ -237,14 +237,14 @@ Brain Tumor - https://github.com/aaronDev28/Brain-datasets/tree/main
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/AK08/Disease-Classification.svg?style=for-the-badge
-[contributors-url]: https://github.com/AK08/Disease-Classification/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/AK08/Disease-Classification.svg?style=for-the-badge
-[forks-url]: https://github.com/AK08/Disease-Classification/network/members
-[stars-shield]: https://img.shields.io/github/stars/AK08/Disease-Classification.svg?style=for-the-badge
-[stars-url]: https://github.com/AK08/Disease-Classification/stargazers
-[issues-shield]: https://img.shields.io/github/issues/AK08/Disease-Classification.svg?style=for-the-badge
-[issues-url]: https://github.com/AK08/Disease-Classification/issues
+[contributors-shield]: https://img.shields.io/github/contributors/AK08/Diagnosify.svg?style=for-the-badge
+[contributors-url]: https://github.com/AK08/Diagnosify/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/AK08/Diagnosify.svg?style=for-the-badge
+[forks-url]: https://github.com/AK08/Diagnosify/network/members
+[stars-shield]: https://img.shields.io/github/stars/AK08/Diagnosify.svg?style=for-the-badge
+[stars-url]: https://github.com/AK08/Diagnosify/stargazers
+[issues-shield]: https://img.shields.io/github/issues/AK08/Diagnosify.svg?style=for-the-badge
+[issues-url]: https://github.com/AK08/Diagnosify/issues
 
 [product-screenshot]: images/screenshot.png
 
