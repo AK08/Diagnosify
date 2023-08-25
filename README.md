@@ -11,7 +11,7 @@
     <img src="images/team.png" >
   </a>
 
-  <h1 align="center">Diagnosify - Neurological Prognosis Platform</h1>
+  <h1 align="center">Diagnosify - Neurological Diagnosis Platform</h1>
 
   <p align="center">
     Welcome to our project!
